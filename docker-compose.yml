@@ -71,37 +71,6 @@ services:
         depends_on:
             - kong
 
-    # mysql:
-    #     build:
-    #         context: ./mysql
-    #         dockerfile: Dockerfile
-    #     container_name: mysql
-    #     networks:
-    #         - kong-micro
-    #     ports:
-    #         - "3306:3306"
-    #     # ENV MYSQL_ROOT_PASSWORD=123456
-    #     # ENV MYSQL_DATABASE=testdb
-    #     # ENV MYSQL_USER=root
-    #     # ENV MYSQL_PASSWORD=123456
-    #     # ENV MYSQL_HOST=localhost
-    #     environment:
-    #         MYSQL_ROOT_PASSWORD: 123456
-    #         MYSQL_DATABASE: testdb
-    #         MYSQL_USER: root
-    #         MYSQL_PASSWORD: 123456
-    # rest:
-    #     build:
-    #         context: ./rest
-    #         dockerfile: Dockerfile
-    #     container_name: rest
-    #     networks:
-    #         - kong-micro
-    #     ports:
-    #         - "6969:6969"
-    #     depends_on:
-    #         - mysql
-
 networks:
     kong-micro:
         driver: bridge
