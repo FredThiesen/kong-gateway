@@ -4,7 +4,7 @@ const app = express()
 const port = 3000
 
 app.get("/test", (req, res) => {
-	res.send("okay")
+	res.send("Parece ter dado certo!")
 })
 
 app.listen(port, () => {
