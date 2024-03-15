@@ -30,7 +30,6 @@ services:
     kong:
         build:
             context: ./kong
-        image: kong-custom
         container_name: kong
         networks:
             - kong-micro
